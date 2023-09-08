@@ -7,9 +7,13 @@ body{
     display: flex;
     justify-content: center;
     background-color: black;
-    height: 100vh;
+    min-height: 100vh;
 }
 .main{
     background-color:brown;
     padding: 1rem;
+}
+p{
+    font-size: 30px;
+    font-weight: 500;
 }

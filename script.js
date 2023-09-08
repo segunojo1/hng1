@@ -1,9 +1,8 @@
 const day = document.querySelector(".day");
 const utcTime = document.querySelector(".time");
-console.log(day);
+
 let dayOfWeek = new Date().getDay();
-let time = new Date().getUTCMilliseconds();
-console.log(time);
+let time = new Date().getTime();
 
 
     switch (dayOfWeek) {
@@ -32,6 +31,11 @@ console.log(time);
         default:
             break;
     }
-console.log(dayOfWeek);
-day.innerText = dayOfWeek;
-utcTime.innerText = time;
+    const setTime = () => {
+        time = new Date().getTime();
+        day.innerText = dayOfWeek;
+        utcTime.innerText = time;
+    }
+    setInterval(() => {
+        setTime()
+    }, 1000);
